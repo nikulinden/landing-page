@@ -22,13 +22,25 @@ img {
     align-self: center;
 }
 
-body {
+html, body {
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    overflow: auto;
+    overflow-x: hidden;
+}
+
+.container {
+    height: 100vh;
+    overflow-y: scroll;
+    /* scroll-snap-type: y mandatory; */
+}
+
+.page {
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: start;
 }
 
 .header,
@@ -43,7 +55,6 @@ body {
     justify-content: space-between;
     flex: 1;
     padding: 0 400px 30px ;
-    height: 50vh;
 }
 
 .header-bar {
@@ -92,6 +103,7 @@ button {
     border-radius: 8px;
     font-weight: 500;
     margin: 15px 0;
+    max-height: 40px;
 }
 
 .content {
@@ -99,7 +111,6 @@ button {
     flex-direction: column;
     justify-content: space-between;
     flex: 5;
-    height: 150hv;
 }
 
 #content-title{
@@ -117,21 +128,64 @@ button {
     gap: 10px;
 }
 
+.card {
+    width: 150px;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text {
+    text-align: center;
+}
+
+.page-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+#quote-container {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 60%;
+    background-color: #E5E7EB; 
+}
+
+#quote {
+    margin: 10% 30% 2%;
+    font-style: italic;
+    font-size: 36px;
+    font-weight: 100;
+    color: #1F2937;
+}
+
+#quote-author {
+    display: flex;
+    align-self: flex-end;
+    margin: 0 30% 2%;
+    font-size: 24px;
+    font-weight: 700; 
+}
 .signup {
     display: flex;
     justify-content: center;
-    /* background-color: blue; */
+    flex: 0 0 40%;
+    background-color: blue;
 }
 
+.footer-section {
+    height: 30px;
+    scroll-snap-align: start;
+}
 .footer {
-    /* position: fixed; */
     bottom: 0;
     left: 0;
     right: 0;
-    height: 50vh;
-    height: 30px;
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 0;
 }
