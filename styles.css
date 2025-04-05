@@ -168,11 +168,20 @@ button {
     font-size: 24px;
     font-weight: 700; 
 }
-.signup {
+
+#signup-container {
     display: flex;
     justify-content: center;
     flex: 0 0 40%;
-    background-color: blue;
+}
+
+.signup {
+    display: flex;
+    flex-direction: column;
+    margin: 100px;
+    padding: 50px 50px 25px;
+    background-color: lightblue;
+    justify-content: center;
 }
 
 .footer-section {
