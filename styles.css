@@ -73,8 +73,8 @@ html, body {
 
 .header-content {
     display: flex;
-    justify-content: space-between;
-    padding-top: 50px;;
+    justify-content: center;
+    padding-top: 50px;
 }
 
 .header-signup {
@@ -111,7 +111,6 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex: 5; 
 }
 
 #content-title{
